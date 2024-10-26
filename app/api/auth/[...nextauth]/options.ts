@@ -37,7 +37,7 @@ export const authOptions: AuthOptions = {
           provider: account?.provider!,
           image: user?.image,
         };
-        const { data } = await axios.post('http://localhost:8000/api/auth/login', payload);
+        const { data } = await axios.post('https://chat.codevia.in/api/auth/login', payload);
 
         user.id = data?.user?.id?.toString();
         user.token = data?.user?.token;
